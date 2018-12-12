@@ -1,0 +1,30 @@
+#service .detail-service strong {
+    color: black;
+}
+
+#service .detail-service {
+    display: inline-block;
+    margin-top: 40px;
+}
+.detail-service .symbol-ES {
+    height: 33px!important;
+}
+@media only screen and (max-width: 479px) {
+    .detail-service .symbol-ES {
+        height: 25px!important;
+        display: block;
+    }
+    .detail-service {
+        /*display: flex !important;*/
+        margin-top: 20px !important;
+    }
+
+        .detail-service p {
+            text-align: justify;
+            margin-top:0px!important;
+        }
+
+        .detail-service img {
+            width: 150px !important;
+        }
+}

@@ -17,6 +17,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NgbModule
   ],
   declarations: [LayoutComponent, HeaderComponent, FooterComponent, GooglemapComponent, ProfileComponent, ContactComponent, ServiceComponent, AccessComponent, ModalComponent, IsotopeComponent],
-  exports: [LayoutComponent, HeaderComponent,FooterComponent,GooglemapComponent,ContactComponent,ProfileComponent]
+  exports: [LayoutComponent, HeaderComponent,FooterComponent,GooglemapComponent,ContactComponent,ProfileComponent,ServiceComponent,AccessComponent]
 })
 export class UiModule { }
