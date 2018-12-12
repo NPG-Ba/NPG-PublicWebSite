@@ -80,8 +80,7 @@
         margin-bottom: 1px;
     }
 
-        #header .navbar-nav li.active a,
-        #header .navbar-nav li:hover a {
+        #nav-link {
             background-color: #ddd !important;
         }
 

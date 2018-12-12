@@ -1,15 +1,14 @@
 <div class="container">
   <div class="googlemap-section">
       <div class="googlemap-toggle">
-          <span style="font-weight: bold;color: black;">
+          <a style="font-weight: bold;color: black;" (click)="isShow = !isShow" [attr.aria-expanded]="!isShow" aria-controls="googleMap">
               LOCATE US ON MAP
-          </span>
-          <span class="arrow-up is-hidden">&#9650;</span>
-          <span class="arrow-down">&#9660;</span>
+          </a>
       </div>
       <br>
   </div>
 </div>
-<div class="googlemap-content">
-  <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6449.0862215011075!2d108.22111295821622!3d16.031745451570522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421900e18679f7%3A0x6d9f5c19895c22c3!2sNapa+Global!5e0!3m2!1svi!2s!4v1542862542046" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<div class="googlemap-content" id="googleMap" [ngClass]="{'d-block': isShow, 'd-none': !isShow}">
+  <iframe class="google-map" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6449.0862215011075!2d108.22111295821622!3d16.031745451570522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421900e18679f7%3A0x6d9f5c19895c22c3!2sNapa+Global!5e0!3m2!1svi!2s!4v1542862542046" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
