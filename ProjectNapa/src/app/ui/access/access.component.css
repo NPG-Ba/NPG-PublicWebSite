@@ -240,3 +240,17 @@ div.inner-cover {
     opacity: 1;
     filter: alpha(opacity=100);
 }
+
+
+
+
+
+
+
+.fw-l {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #434345;
+    text-align: center;
+}

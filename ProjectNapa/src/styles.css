@@ -20,12 +20,23 @@ body {
     margin:0;
     width:100%;
 }
-section header h1 {
+section header h1,section h1 {
     color: #444;
     font-size: 32px;
     font-weight: 600;
     line-height: 36px;
     letter-spacing: 10px;
     text-align: center;
-    border-bottom-style: 1px solid;
+    margin-top: 30px;
+}
+p {
+    letter-spacing: 0.5px;
+}
+.divider
+{
+    background-color:antiquewhite;
+    width: 12%;
+    height: 2px;
+    text-align: center;
+    margin-bottom: 35px;
 }
