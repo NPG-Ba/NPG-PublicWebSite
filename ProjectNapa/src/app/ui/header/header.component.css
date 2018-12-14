@@ -6,7 +6,10 @@
         padding-bottom: 20px;
         width: 100%;
     }
-
+    a.nav-link {
+        color: cornflowerblue;
+        font-size: 16px;
+    }
     .designs-header {
         margin-left: 0px !important;
         font-size: 20px !important;
@@ -87,4 +90,43 @@
     #header .navbar-inverse .navbar-nav > li:after {
         display: none;
     }
+    .navbar-brand img {
+        max-height: 42px !important;
+    }
+    button.navbar-toggler {
+        margin: 0px;
+        padding: 0px;
+    }
+    .navbar-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+header {
+    display: block;
+    background-color: #fff;
+    border-bottom: 5px solid #92278f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+a.nav-link {
+    color: cornflowerblue;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px; 
+    margin-right: 20px;
+}
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav :focus
+{
+    color: gold !important;
+    border-bottom-color:blue;
 }

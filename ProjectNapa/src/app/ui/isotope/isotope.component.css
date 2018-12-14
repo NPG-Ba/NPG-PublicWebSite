@@ -1,60 +1,121 @@
-
-.list-project
-{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
-}
-.project-item
-{
-background-color:  burlywood;
-padding-bottom: 10px;
-}
-.border-isotope-item
-{
-    background-color:green;
-    width: 14%;
-    height: 1px;
-    text-align: center;
-    margin-bottom: 5px;
-}
-.item-box-desc
-{
-    padding-top: 0%;
-}
-.item-box-desc h4 {
-    font-size: 23px;
-    color: white;
-    text-transform: uppercase;
+/* ==========================================================================
+   Portfolio Section
+   ========================================================================== */
+   #portfolios {
+    background: #f9f9f9;
+  }
+  
+  #portfolios .mix {
     padding: 0px;
-    letter-spacing: 0.5px;
-    text-align:-webkit-center;
+  }
+  
+  #portfolios .portfolio-item {
+    padding: 10px;
+  }
+  
+  #portfolio[_ngcontent-c8] .mix[_ngcontent-c8] {
+    margin-bottom: 25px;
 }
-.border
-{
-    background-color:whitesmoke;
-    width: 10%;
-    height: 1px;
-    text-align: center;
-    margin-bottom: 10px;
+a.filter.active.btn.btn-common.btn-effect {
+    /* background-color: green; */
+    border-radius: 20px;
 }
-.nav > li > a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    border-radius: 10px;
-    background-color: #69971C;
+a.filter.btn.btn-common.btn-effect {
+    margin: 5px;
+}
+a.filter.active.btn.btn-common.btn-effect :hover{
+     background-color: green; 
+    border-radius: 20px;
+}
+  
+
+/* ==========================================================================
+   Portfolio Section
+   ========================================================================== */
+
+   .list-project
+   {
+       list-style: none;
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       align-items: stretch;
+       align-content: stretch;
+   }
+   .project-item
+   {
+   background-color:  burlywood;
+   padding-bottom: 10px;
+   }
+   .border-isotope-item
+   {
+       background-color:green;
+       width: 14%;
+       height: 1px;
+       text-align: center;
+       margin-bottom: 5px;
+   }
+   .item-box-desc
+   {
+       padding-top: 0%;
+   }
+   .item-box-desc h4 {
+       font-size: 23px;
+       color: white;
+       text-transform: uppercase;
+       padding: 0px;
+       letter-spacing: 0.5px;
+       text-align:-webkit-center;
+   }
+   .border
+   {
+       background-color:whitesmoke;
+       width: 10%;
+       height: 1px;
+       text-align: center;
+       margin-bottom: 10px;
+   }
+   .nav > li > a {
+       position: relative;
+       display: block;
+       padding: 10px 15px;
+       border-radius: 10px;
+       background-color: #69971C;
+   }
+   
+   
+   .nav > li > a:hover{
+       position: relative;
+       display: block;
+       padding: 10px 15px;
+       border-radius: 10px;
+       background-color: #69971C;
+   }
+
+
+.row.portfolio-items {
+    display: contents;
+    text-align: center; 
+}
+ul.sort-destination.isotope {
+    list-style: none;
+}
+.item-box {
+    width: 100%;
+    margin-left: 400px;
+    height: 100%;
+}
+#img-responsive {
+    vertical-align: middle;
+    border-style: none;
+    width: 90%;
 }
 
 
-.nav > li > a:hover{
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    border-radius: 10px;
-    background-color: #69971C;
-}
+
+
+
+
+
+
