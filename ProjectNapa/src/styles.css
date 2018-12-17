@@ -74,10 +74,10 @@ p {
   }
   
   .btn-common {
-    background-color: #F97794;
+    background-color: white;
     position: relative;
     z-index: 1;
-    padding: 12px 32px;
+    padding: 5px 30px;
     border-radius: 30px;
   }
   
@@ -118,7 +118,7 @@ p {
   
   .btn-border:hover {
     color: #ffffff;
-    background-color: #F97794;
+    background-color: #62893B;
   }
   
   .btn-lg {
@@ -139,6 +139,10 @@ p {
   .clear {
     clear: both;
   }
+
+
+  
+
 
 
   

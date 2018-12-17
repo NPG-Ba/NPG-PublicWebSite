@@ -18,12 +18,13 @@
 }
 .destails-profile p
 {
-    font-size: 16px;
+    font-size: 15px;
     color: white;
     padding: 5px 0px;
     line-height: 30px;
     letter-spacing: 0.5px;
     text-align: -webkit-left;
+    font-weight: 300;
 }
 .card-body {
     background-color: rebeccapurple;
@@ -54,10 +55,10 @@
     }
     .destails-profile p
     {
-        font-size: 16px;
+        font-size: 14px;
         color: white;
-        padding: 5px 0px;
-        line-height: 30px;
+        padding: 0px;
+        line-height: 25px;
         letter-spacing: 0.5px;
         text-align: center;
     }
@@ -69,11 +70,43 @@
         letter-spacing: 0.5px;
         text-align: center;
     }
-    .card
-    {
-        text-align:-webkit-center;
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        margin: auto;
+    }
+    .name-profile {
+        margin-top: 9px;
+    }
+    .carousel-inner.row.w-100.mx-auto[_ngcontent-c5] {
+        padding-bottom: 40px;
+        padding-top: 0px;
+    }
+    .card-body {
+        flex: 1 1 auto;
+        padding: 0.5rem;
+        border-radius: 2px;
     }
   }
+  .card-body {
+    flex: 1 1 auto;
+    padding: 0.5rem;
+    border-radius: 2px;
+    color: #fff;
+}
+  img.img-fluid.mx-auto.d-block {
+    border-radius: 3px;
+    width: 71%;
+    max-height: 200px;
+}
+
 
   /* ==========================================================================
    Slide

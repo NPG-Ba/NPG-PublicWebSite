@@ -101,6 +101,19 @@
         padding-top: 15px;
         padding-bottom: 15px;
     }
+    a.nav-link {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+    li.nav-item :hover {
+        background-color: sandybrown;
+    }
+    a.nav-link:hover {
+        font-weight: 600;
+        border-bottom: none;
+      }
 }
 header {
     display: block;
@@ -119,14 +132,20 @@ header {
     transition: opacity 500ms;
 }
 a.nav-link {
-    color: cornflowerblue;
-    font-size: 16px;
-    font-weight: 500;
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
     letter-spacing: 1px; 
-    margin-right: 20px;
+    margin-right: 25px;
 }
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav :focus
-{
-    color: gold !important;
-    border-bottom-color:blue;
+
+.navbar-toggler-icon[_ngcontent-c1] {
+    width: 35px;
+    height: 35px;
+    background-color: floralwhite;
+    border-radius: 4px;
 }
+a.nav-link:hover {
+    font-weight: 600;
+    border-bottom: 2px solid blueviolet;
+  }
