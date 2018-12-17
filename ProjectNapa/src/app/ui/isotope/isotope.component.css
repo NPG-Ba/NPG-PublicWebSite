@@ -16,10 +16,6 @@
   #portfolio[_ngcontent-c8] .mix[_ngcontent-c8] {
     margin-bottom: 25px;
 }
-a.filter.active.btn.btn-common.btn-effect {
-    /* background-color: green; */
-    border-radius: 20px;
-}
 a.filter.btn.btn-common.btn-effect {
     margin: 5px;
 }
@@ -46,4 +42,13 @@ a.filter.active.btn.btn-common.btn-effect :hover{
 	justify-content: space-around;
 	align-items: stretch;
 	align-content: space-around;
+}
+
+@media (min-width: 768px){
+  .col-md-3 {
+      flex: 0 0 25%;
+      margin: 5px;
+      max-width: 24%;
+      text-align: center;
+  }
 }

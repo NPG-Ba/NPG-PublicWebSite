@@ -1,3 +1,6 @@
 section#access {
-    height: 1000px;
+    height: auto;
 }
+p.fw-l {
+    text-align: -webkit-center;
+  }
