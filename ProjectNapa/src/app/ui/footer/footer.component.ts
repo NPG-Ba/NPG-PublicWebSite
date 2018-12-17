@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
+  loginFormModalEmail = new FormControl('', Validators.email);
+  loginFormModalPassword = new FormControl('', Validators.required);
   constructor() { }
 
   ngOnInit() {
