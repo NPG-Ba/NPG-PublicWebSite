@@ -57,8 +57,6 @@
                 <div class="col-md-12">
                     <div class="site-info">
                         <p>© 2018 Napaglobal. All Right Reserved</p>
-                        <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
-                            (click)="frame.show()" mdbWavesEffect>Launch Modal</button>
                     </div>
                 </div>
             </div>
@@ -66,39 +64,44 @@
     </div>
 
 
-
-
-    <div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
-        aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body mx-3">
-                    <div class="md-form mb-5">
-                        <i class="fa fa-envelope prefix grey-text"></i>
-                        <input type="email" id="defaultForm-email" [formControl]="loginFormModalEmail" class="form-control validate"
-                            mdbInputDirective>
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-                    </div>
-
-                    <div class="md-form mb-4">
-                        <i class="fa fa-lock prefix grey-text"></i>
-                        <input type="password" id="defaultForm-pass" [formControl]="loginFormModalPassword" class="form-control validate"
-                            mdbInputDirective>
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-                    </div>
-
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button mdbBtn color="default" class="waves-light" mdbWavesEffect>Login</button>
-                </div>
-            </div>
+    <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Get Start To Day</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-    </div>
-    Simple mod
+        <div class="modal-body">
+          <form>
+            <div class="form-group input-modal">
+              <div class="input-group">
+                <input required="" class="fullwidth form-control input-lg" type="text" name="contact_name" id="contact_name" value="" placeholder="Fullname *" title="Name">
+              </div>
+              <div class="input-group input-modal">
+                <input required="" class="fullwidth form-control input-lg" type="text" name="contact_company" id="contact_name" value="" placeholder="Company *" title="Name">
+              </div>
+              <div class="input-group input-modal">
+                <input required="" class="fullwidth form-control input-lg" type="email" name="contact_email" id="contact_email" value="" placeholder="Work email address *" title="Email">
+              </div>
+              <div class="input-group input-modal">
+                <select id="form_need" name="need" class="fullwidth form-control input-lg" required="required" data-error="Enterested service of product">
+                    <option value="">Please specify your need *</option>
+                    <option value="Request quotation">Request quotation</option>
+                    <option value="Request order status">Request order status</option>
+                    <option value="Request copy of an invoice">Request copy of an invoice</option>
+                    <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="input-group input-modal">
+                <textarea required="" class="fullwidth form-control input-lg" rows="3" name="contact_comment" id="contact_comment" placeholder="Send your message *"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark btn-common" (click)="modal.close('Save click')">Save</button>
+        </div>
+      </ng-template>
+      
+      <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
 </footer>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-footer',
@@ -7,11 +7,28 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  loginFormModalEmail = new FormControl('', Validators.email);
-  loginFormModalPassword = new FormControl('', Validators.required);
-  constructor() { }
 
   ngOnInit() {
   }
+  closeResult: string;
 
+  constructor(private modalService: NgbModal) {}
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
 }
