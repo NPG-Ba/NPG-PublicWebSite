@@ -3,23 +3,56 @@
         <div class="table">
             <div class="table-cell">
                 <div class="text-home">
-                    <ul class="text-slider" style="display:none">
+                    <ul class="text-slider">
                         <li>
                             <p class="header-texthome">BUILD YOUR WEB AND MOBILE APPS</p>
-                        </li>
-                        <li>
-                            <p class="header-texthome">GET YOUR AI AND BLOCKCHAIN TEAMS</p>
-                        </li>
-                        <li>
-                            <p class="header-texthome">DEVELOP YOUR EMBEDDED SYSTEMS</p>
                         </li>
                     </ul>
                     <!--<p class="header-texthome"> BUILD YOUR WEB AND MOBILE APP</p>-->
                     <p class="detail-texthome">NAPA Global Helps You Realize Your Vision</p>
                 </div>
                 <div class="btn-getsrat">
-                    <a class="btn-popup" href="#ex3" rel="modal:open">Get Started Today</a>
+                    <button class="filter active btn btn-common btn-effect" (click)="open(content)" 
+                    >Get Started Today</button>
                 </div>
+           </div>
+        </div> 
+    <ng-template #content let-modal>
+            <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Welcome to NapaGolbal</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
             </div>
-        </div>
+            <div class="modal-body">
+            <form>
+                <div class="form-group input-modal">
+                <div class="input-group">
+                    <input required="" class="fullwidth form-control input-lg" type="text" name="contact_name" id="contact_name" value="" placeholder="Fullname *" title="Name">
+                </div>
+                <div class="input-group input-modal">
+                    <input required="" class="fullwidth form-control input-lg" type="text" name="contact_company" id="contact_name" value="" placeholder="Company *" title="Name">
+                </div>
+                <div class="input-group input-modal">
+                    <input required="" class="fullwidth form-control input-lg" type="email" name="contact_email" id="contact_email" value="" placeholder="Work email address *" title="Email">
+                </div>
+                <div class="input-group input-modal">
+                    <select id="form_need" name="need" class="fullwidth form-control input-lg" required="required" data-error="Enterested service of product">
+                        <option value="">Please specify your need *</option>
+                        <option value="Request quotation">Request quotation</option>
+                        <option value="Request order status">Request order status</option>
+                        <option value="Request copy of an invoice">Request copy of an invoice</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group input-modal">
+                    <textarea required="" class="fullwidth form-control input-lg" rows="3" name="contact_comment" id="contact_comment" placeholder="Send your message *"></textarea>
+                </div>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark btn-common" (click)="modal.close('Save click')">Save</button>
+            </div>
+      </ng-template>
     </section>

@@ -7,78 +7,15 @@
          </div>
       </header>
       <div class="row">
-         <div class="item-boxes col-lg-6 col-md-6 col-xs-12 animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
+         <div *ngFor="let item of service"  class="item-boxes col-lg-6 col-md-6 col-xs-12 animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
             <div class="featured-box">
                <div class="featured-icon">
-                  <img class="symbol" src="assets/images/symbol/Symbol WD.svg">
+                  <img class="symbol" src="{{item.icon}}">
                </div>
                <div class="featured-content">
                   <div class="icon-o"><i class="lni-tab"></i></div>
-                  <h4>Web Apps Development</h4>
-                  <p>Our reponsive web site designs will make you look good in every screen. Ecommerce, CMS, corporate, personal or custom web application. <a href="#" class="badge badge-light"> Read more ...</a></p>
-                  
-               </div>
-            </div>
-         </div>
-         <div class="item-boxes col-lg-6 col-md-6 col-xs-12 animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
-            <div class="featured-box">
-               <div class="featured-icon">
-                  <img class="symbol" src="assets/images/symbol/Symbol MA.svg">
-               </div>
-               <div class="featured-content">
-                  <div class="icon-o"><i class="lni-tab"></i></div>
-                  <h4>Mobile Apps Development</h4>
-                  <p>IOS and Android app development. Why pick a platform? Get your native or HTML5 apps to support all the major mobile platforms.<a href="#" class="badge badge-light"> Read more ...</a></p>
-               </div>
-            </div>
-         </div>
-         <div class="item-boxes col-lg-6 col-md-6 col-xs-12 animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
-            <div class="featured-box">
-               <div class="featured-icon">
-                  <img class="symbol" src="assets/images/symbol/Sym_BC.svg">
-               </div>
-               <div class="featured-content">
-                  <div class="icon-o"><i class="lni-tab"></i></div>
-                  <h4>Blockchain Solutions</h4>
-                  <p>Making full-fledged cryptocurrency exchange, ICO solution, Integrate cruyptocurrency deposit and withdraw and payment.<a href="#" class="badge badge-light"> Read more ...</a></p>
-               </div>
-            </div>
-         </div>
-         <div class="item-boxes col-lg-6 col-md-6 col-xs-12 animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
-            <div class="featured-box">
-               <div class="featured-icon">
-                  <img class="symbol" src="assets/images/symbol/Symbol_AI.svg">
-               </div>
-               <div class="featured-content">
-                  <div class="icon-o"><i class="lni-tab"></i></div>
-                  <h4>AI</h4>
-                  <p>We're experienced backend developers, powering data management tools for many of our clients.
-                      Get a software that adapts to your business and grows with it.<a href="#" class="badge badge-light"> Read more ...</a></p>
-               </div>
-            </div>
-         </div>
-         <div class="item-boxes col-lg-6 col-md-6 col-xs-12 animated" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
-            <div class="featured-box">
-               <div class="featured-icon">
-                  <img class="symbol" src="assets/images/symbol/Symbol em.svg">
-               </div>
-               <div class="featured-content">
-                  <div class="icon-o"><i class="lni-tab"></i></div>
-                  <h4>Embedded Systems</h4>
-                  <p>We're experienced in automotive domain with car navigation, ECU unit testing and development, 
-                     drivers development, firmware middleware development. <a href="#" class="badge badge-light"> Read more ...</a></p>
-               </div>
-            </div>
-         </div>
-         <div class="item-boxes col-lg-6 col-md-6 col-xs-12" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
-            <div class="featured-box">
-               <div class="featured-icon">
-                  <img class="symbol" src="assets/images/symbol/Symbol BPO.svg">
-               </div>
-               <div class="featured-content">
-                  <div class="icon-o"><i class="lni-tab"></i></div>
-                  <h4>BPO (Business Process Outsourcing)</h4>
-                  <p>Exoerience in simple jobs like data entry, labeling image with high pridcutivity and low costs.<a href="#" class="badge badge-light"> Read more ...</a></p>
+                  <h4>{{item.name}}</h4>
+                  <p> {{item.title}}<a href="#" class="badge badge-light"> Read more ...</a></p>
                </div>
             </div>
          </div>
