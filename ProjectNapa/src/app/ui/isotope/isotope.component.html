@@ -1,41 +1,22 @@
-<!--
-      <div class="row">
-      <ul style="list-style: none;">
-          <li class="customer" style="background-color: springgreen" ><a href="javascript:void(0);" (click)="filter('blockchain')">Blockchain Solutions</a></li>
-         <li class="customer"><a href="javascript:void(0);" (click)="filter('web')">Web Development</a></li>
-         <li class="customer"><a href="javascript:void(0);" (click)="filter('development')">Backend Applications</a></li>
-         <li class="customer"><a href="javascript:void(0);" (click)="filter('apps')">Apps Development</a></li>
-         <li class="customer"><a href="javascript:void(0);" (click)="filter('bpo')">BPO Services</a></li>
-
-         <li class="customer" style="background-color: springgreen" ><a href="javascript:void(0);">Blockchain Solutions</a></li>
-         <li class="customer"><a href="javascript:void(0);">Web Development</a></li>
-         <li class="customer"><a href="javascript:void(0);">Backend Applications</a></li>
-         <li class="customer"><a href="javascript:void(0);">Apps Development</a></li>
-         <li class="customer"><a href="javascript:void(0);">BPO Services</a></li>
-         </ul>
-   </div>
--->
-
-
 <div class="row " style="margin-bottom: 20px">
   <div class="col-md-12">
     <!-- Portfolio Controller/Buttons -->
     <div class="controls text-center">
-      <a class="filter active btn btn-common btn-effect" data-filter=".all" href="javascript:void(0);" (click)="filter('web')" style="color: black" *ngFor="let tag of tags">
+      <a class="filter active btn btn-common btn-effect" data-filter=".all" href="javascript:void(0);" (click)="filter(tag.clazz)" style="color: black" *ngFor="let tag of tags">
         {{tag.name}}
       </a>
     </div>
     <!-- Portfolio Controller/Buttons Ends-->
   </div>
 </div>
-<div class="row flex-profile web">
-  <div class="col-sm-6 col-md-3 card-flex" style="width: 18rem; margin-bottom: 15px;" *ngFor="let pro of profile">
-    <img class="card-img-top" src="{{pro.image}}" alt="Card image cap">
-    <div class="card-body">
-      <h4>{{pro.title}}</h4>
-      <hr class="border divider-sm bg-green">
-      <small class="styleColor">{{pro.content}}</small>
-      <hr class="border-isotope-item divider-sm">
+<div class="row grid">
+    <div class="col-sm-6 col-md-3 grid-item" style="width: 18rem; margin: 10px 10px 10px 10px" *ngFor="let pro of profile" [ngClass]="pro.clazz">
+      <img class="card-img-top" src="{{pro.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h4>{{pro.title}}</h4>
+        <hr class="border divider-sm bg-green">
+        <small class="styleColor">{{pro.content}}</small>
+        <hr class="border-isotope-item divider-sm">
+      </div>
     </div>
-  </div>
 </div>

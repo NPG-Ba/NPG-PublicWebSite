@@ -60,13 +60,9 @@ small, .small {
   display: inline-block;
   margin-bottom: 5px;
 }
-.row.flex-profile {
-  display: flex;
-  flex-direction: row;
-  /* flex-wrap: nowrap; */
-  justify-content: space-around;
-  align-items: stretch;
-  align-content: stretch;
+.row.grid {
+  width: 100%;
+  left: 30px;
 }
 
 
@@ -126,16 +122,11 @@ hr.border.divider-sm.bg-green[_ngcontent-c9] {
       padding: 0;
       height: 280px;
   }
-  .row.flex-profile {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: nowrap; */
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: stretch;
-
+  .row.grid[_ngcontent-c9] {
+      width: 100%;
+      left: 30px;
   }
-  .col-sm-6.col-md-3.card.flex {
+  .col-sm-6.col-md-3.grid-item {
     padding: 0px;
   }
 }
