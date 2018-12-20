@@ -1,22 +1,14 @@
 <section id="home" class="parallax" style="border-top: 5px solid #92278f;">
-    <div class="slider slider-current" style="background: url(&quot;assets/images/demo/slider/Global-Growth.png&quot;) 50% "></div>
-        <div class="table">
-            <div class="table-cell">
-                <div class="text-home">
-                    <ul class="text-slider">
-                        <li>
-                            <p class="header-texthome">BUILD YOUR WEB AND MOBILE APPS</p>
-                        </li>
-                    </ul>
-                    <!--<p class="header-texthome"> BUILD YOUR WEB AND MOBILE APP</p>-->
-                    <p class="detail-texthome">NAPA Global Helps You Realize Your Vision</p>
-                </div>
-                <div class="btn-getsrat">
-                    <button class="filter active btn btn-common btn-effect" (click)="open(content)" 
-                    >Get Started Today</button>
-                </div>
-           </div>
-        </div> 
+    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+        <ng-template ngbSlide *ngFor="let image of images">
+            <img  [src]="image.src" style="width: 100%;height: 800px;">
+                <div class="carousel-caption">
+                    <h3>{{image.title}}</h3>
+                    <p >{{image.des}}</p>
+                    <button class="filter active btn btn-common btn-effect" (click)="open(content)" >Get Started Today</button>
+                </div> 
+        </ng-template>
+    </ngb-carousel>
     <ng-template #content let-modal>
             <div class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">Welcome to NapaGolbal</h4>
